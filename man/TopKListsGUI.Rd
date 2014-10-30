@@ -30,7 +30,7 @@ gui.size = c(900, 810), directory = NULL, venndiag.res = 70, aggmap.res = 100)
 }
 \item{gui.size}{A numeric vector defining the width and height of the RGUI to be displayed; defaults to c(900, 810)
 }
-\item{directory}{Specification of the name of the directory where the results and plots should be saved (including some temporary files required for the calculations). If kept \code{NULL} a directory called "TopKLists-temp" will be created in \code{tempdir()}. In other cases writing permission is needed for \code{directory}.
+\item{directory}{Specification of the name of the directory where the results and plots should be saved (including some temporary files required for the calculations). If kept \code{NULL} a directory called "TopKLists-temp" will be created in \code{getwd()}. In that case a write permission is needed for \code{getwd()}.
 }
 \item{venndiag.res}{A number defining the resolution of the Venn-diagram plot - this argument is passed to the \code{res = argument} of the \code{png()} function saving the diagram, but affects also the RGUI display; defaults to 70
 }
@@ -61,11 +61,9 @@ Eva Budinska <budinska@iba.muni.cz>, Karl G. Kugler <kg.kugler@gmail.com>, Micha
   \code{\link{CEMC}}
 }
 \examples{
-##using a GUI
 \dontrun{
-data(TopKGUISampleInput)
-TopKListsGUI(lists)
-# Run for nu=10, delta from 2 to 10
+data(breast)
+TopKListsGUI(breast)
 }
 
 }
