@@ -34,7 +34,7 @@ head(resF)
 table(resF[,2])
 
 ## ----truncPlot, out.width='8cm', out.height='8cm', fig.pos="ht!", fig.cap="Estimation of $j_0$ for different values of $\\nu$", fig.align='center'----
-plot(resF[,1], resF[,2], pch=19, ylim=c(25, 40), 
+plot(resF[,1], resF[,2], pch=19, ylim=c(25, 40),
 xlab=substitute(nu), ylab=substitute(paste(hat(j)[0])))
 abline(a=31, b=0, col="red")
 lines(resF[,1], resF[,2])
@@ -49,11 +49,11 @@ space1=space2=space3=paste("Obj",1:40,sep="")
 space=list(space1,space2,space3)
 
 ## ---------------------------------------------------------
-outBorda=Borda(input,space) 
+outBorda=Borda(input,space)
 # "space" is explicitly specified; underlying space-dependent
 
 ## ---------------------------------------------------------
-outBorda1=Borda(input) 
+outBorda1=Borda(input)
 #"space" is not specified; all lists are assumed to come from the common space (objects Obj1-Obj40)
 
 
@@ -73,15 +73,15 @@ Borda.plot(outBorda, k=40) # plot scores from underlying space-dependent analysi
 Borda.plot(outBorda2, k=40) # plot scores from top-k space analysis
 
 ## ---------------------------------------------------------
-outMC=MC(input,space) 
+outMC=MC(input,space)
 # "space" is explicitly specified; underlying space-dependent
 
 ## ---------------------------------------------------------
-outMCa=MC(input,k=30) 
+outMCa=MC(input,k=30)
 # "space" is not specified, so it is the same as common space (O1-O40)
 
 ## ---------------------------------------------------------
-outMCb=MC(input,space=input) 
+outMCb=MC(input,space=input)
 # "space = input" indicates that this is the top-k space
 
 ## ---------------------------------------------------------
@@ -100,7 +100,7 @@ outCEMC=CEMC(input,space,N=4000,N1=400)
 
 ## ---------------------------------------------------------
 list(outCEMC$TopK)
-outCEMC$ProbMatrix[1:5,1:5] 
+outCEMC$ProbMatrix[1:5,1:5]
 
 ## ---------------------------------------------------------
 outCEMC$input.par
@@ -122,10 +122,10 @@ dir.create(subplot.dir, showWarnings = FALSE)
 ## ----fig.show='hide'--------------------------------------
 library(TopKLists)
 data(breast)
-a=deltaplot(breast, deltas = seq(0,300, by=5), directory=deltaplot.dir) 
+a=deltaplot(breast, deltas = seq(0,300, by=5), directory=deltaplot.dir)
 
 ## ----fig.show='hide'--------------------------------------
-a=deltaplot(breast, deltas = 1:50, subset.lists=200, subplot = TRUE, 
+a=deltaplot(breast, deltas = 1:50, subset.lists=200, subplot = TRUE,
   perc.subplot=50, directory=subplot.dir)
 
 ## ---------------------------------------------------------
@@ -148,7 +148,7 @@ space=list(common,common,common)
 ## ---------------------------------------------------------
 outBorda=Borda(input,space)
 outMC=MC(input,space)
-outCEMC=CEMC(input,space,N=2000) 
+outCEMC=CEMC(input,space,N=2000)
 outCEMC$TopK[1:k]
 
 ## ---------------------------------------------------------
