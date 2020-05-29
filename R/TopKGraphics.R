@@ -1,7 +1,7 @@
 TopKListsGUI <- function(lists, autorange.delta = FALSE, override.errors = TRUE,  venndiag.pdf.size = c(7, 7), venndiag.size = c(380, 420), gui.size = c(900, 810), directory = NULL, venndiag.res = 70, aggmap.res = 100) {
   requireNamespace("RGtk2")
   requireNamespace("gWidgets2")
-  requireNamespace("gWidgetsRGtk2")
+  requireNamespace("gWidgets2RGtk2")
   options("guiToolkit"="RGtk2")
 
   ##setting up the directory
@@ -101,7 +101,7 @@ TopKListsGUI <- function(lists, autorange.delta = FALSE, override.errors = TRUE,
   update.deltarange <- function() {
     requireNamespace("RGtk2")
     requireNamespace("gWidgets2")
-    requireNamespace("gWidgetsRGtk2")
+    requireNamespace("gWidgets2RGtk2")
     
                                         #check if allowed range for delta should be updated
     if (autorange.delta) {
@@ -118,7 +118,7 @@ TopKListsGUI <- function(lists, autorange.delta = FALSE, override.errors = TRUE,
   load.data <- function(truncated.lists) {
     requireNamespace("RGtk2")
     requireNamespace("gWidgets2")
-    requireNamespace("gWidgetsRGtk2")
+    requireNamespace("gWidgets2RGtk2")
     
                                         #update is only performed when delta slider is enabled
     if (gWidgets2::enabled(wid$delta.slider)) {
@@ -177,7 +177,7 @@ TopKListsGUI <- function(lists, autorange.delta = FALSE, override.errors = TRUE,
   calculate.all.truncationlists <- function() {
     requireNamespace("RGtk2")
     requireNamespace("gWidgets2")
-    requireNamespace("gWidgetsRGtk2")
+    requireNamespace("gWidgets2RGtk2")
     
                                         #check if entered values are valid
     if ((as.numeric(gWidgets2::svalue(wid$delta.start)) < 0) || (as.numeric(gWidgets2::svalue(wid$delta.stop)) < 0) || (gWidgets2::svalue(wid$delta.start) > gWidgets2::svalue(wid$delta.stop))) {

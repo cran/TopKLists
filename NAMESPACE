@@ -1,4 +1,4 @@
-useDynLib(TopKLists)
+useDynLib(TopKLists, .registration = TRUE)
 import(Hmisc)
 import(grid)
 import(gplots)

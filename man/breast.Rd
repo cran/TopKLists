@@ -13,7 +13,7 @@ expression) from three breast cancer studies:
 Only genes (unique gene symbols) common to all studies are considered, therefore
 each of the three lists has the length of N = 917.
 }
-\usage{breast}
+\usage{data(breast)}
 \format{data.frame}
 \source{
 \enumerate{
