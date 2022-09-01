@@ -17,9 +17,9 @@ each of the three lists has the length of N = 917.
 \format{data.frame}
 \source{
 \enumerate{
- \item TransBig: \href{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=gse7390}{GEO GSE7390}
- \item MDCC: \href{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE20194}{GEO GSE20194}
- \item Pusztai: \href{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE20271}{GEP GSE20271}
+ \item TransBig: \href{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=gse7390}{GEO GSE7390}
+ \item MDCC: \href{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE20194}{GEO GSE20194}
+ \item Pusztai: \href{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE20271}{GEP GSE20271}
 }
 }
 \references{
